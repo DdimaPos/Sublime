@@ -493,11 +493,7 @@ body {
 		font-size: 110px;
 	}
 	.featured__images {
-		flex-basis:100%;
-		&:last-child{
-			flex-basis: 100%;
-			
-		}	
+		flex-basis:50%;
 		.featured-items{
 			width: 100%;
 			
@@ -505,12 +501,17 @@ body {
 		}
 	}
 	
+	
 }
 @media (max-width:425px){
+	.title{
+		padding: 20px 0 30px 20px;
+	}
 	.title__name {
 		font-size: 90px;
 	}
 	.nav__title{
+		
 		font-size: 60px;
 	}
 	.title__description {
@@ -518,17 +519,21 @@ body {
 		font-size: 12px;
 	}
 	.nav{
+		padding: 10px 0 400px 40px;
 		height: 550px;
 	}
 	.nav__choose ul{
 		width: fit-content;
 		flex-direction: column;
-		line-height: 50px;
+		li{
+			width: fit-content;
+			padding:0 0 20px 0;
+		}
 		padding-bottom: 200px;
 	}
 	.about__header .about__info{
 		width: 100%;
 		margin: 10px 40px;
 	}
-
+	
 }
