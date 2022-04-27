@@ -511,12 +511,12 @@ body {
   .featured__images:last-child {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    height: 100%;
+    height: auto;
   }
-  .featured__images:last-child .featured-items img {
+  .featured__images:last-child img {
+    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    overflow: hidden;
   }
   .featured__images .featured-items {
     height: 100%;
