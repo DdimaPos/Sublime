@@ -137,7 +137,7 @@ body {
 
 .nav {
   color: white;
-  background-image: url("../img/navigation/the-last-of-us-part-ii.jpg");
+  background-image: url("../img/navigation/far-cry-3-heroBanner.jpg");
   background-size: cover;
   padding: 58px 0 400px 40px;
 }
@@ -344,6 +344,9 @@ body {
 
 .featured .featured-items {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .sprocess {
@@ -473,26 +476,6 @@ body {
   }
 }
 
-@media (max-width: 900px) {
-  .featured__images {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-  .featured__images:last-child {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    height: 100%;
-    overflow: visible;
-  }
-  .featured__images .featured-items {
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 50% 0;
-       object-position: 50% 0;
-  }
-}
-
 @media (max-width: 750px) {
   .title__name {
     font-size: 150px;
@@ -525,8 +508,20 @@ body {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
   }
+  .featured__images:last-child {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    height: 100%;
+  }
+  .featured__images:last-child .featured-items img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    overflow: hidden;
+  }
   .featured__images .featured-items {
-    width: 100%;
+    height: 100%;
+    -o-object-position: 50% 0;
+       object-position: 50% 0;
   }
 }
 
