@@ -27,15 +27,29 @@
 					<div class="nav__title"><span style="color: #f2c244;">We</span> create <br>Awesome Games</div>
 					<div class="nav__choose">
 						<ul>
-							<li><a class="nav__link" href="">About</a></li>
-							<li><a class="nav__link" href="">Development</a></li>
-							<li><a class="nav__link" href="">Project</a></li>
-							<li><a class="nav__link" href="">Blog</a></li>
+							<li><a class="nav__link" href="#about">About</a></li>
+							<li><a class="nav__link" href="#featured">Projects</a></li>
+							<li><a class="nav__link" href="#development">Development</a></li>
+							<li><a class="nav__link" href="#blog">Blog</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
-			<div class="about">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("a.nav__link").click(function(){
+						$("html,body").animate({
+							scrollTop:$($(this).attr("href")).offset().top + "px"
+						}, {
+							duration:750,
+							easing:"swing"
+						});
+						return false;
+					});
+				});
+			</script>
+			<div class="about" id="about">
 				<div class="about__body">
 					<div class="about__header ">
 						<div class="about__title">
@@ -107,23 +121,23 @@
 					</div>
 				</div>
 			</div>
-			<div class="featured">
+			<div class="featured" id="featured">
 				<div class="featured__topic topic"> Featured <span style="font-size: 50px;">P</span>rojects</div>
 				<div class="featured__gallery">
 					<div class="featured__images"><img class="featured-items" src="img/featured/mass_effect.jpeg" alt="">
 					</div>
 					<div class="featured__images"><img class="featured-items" src="img/featured/AssasinsCreed.png" alt="">
 					</div>
-					<div class="featured__images"><img class="featured-items" src="img/featured/AssasinsCreed.png" alt="">
+					<div class="featured__images"><img class="featured-items" src="img/featured/3.jpg" alt="">
 					</div>
-					<div class="featured__images"><img class="featured-items" src="img/featured/AssasinsCreed.png" alt="">
+					<div class="featured__images"><img class="featured-items" src="img/featured/4.jpg" alt="">
 					</div>
 
 				</div>
 				<div class="featured__gallery">
-					<div class="featured__images"><img class="featured-items" src="img/featured/AssasinsCreed.png" alt="">
+					<div class="featured__images"><img class="featured-items" src="img/featured/5.jpg" alt="">
 					</div>
-					<div class="featured__images"><img class="featured-items" src="img/featured/AssasinsCreed.png" alt="">
+					<div class="featured__images"><img class="featured-items" src="img/featured/6.jpg" alt="">
 					</div>
 					<div class="featured__images"><img class="featured-items" src="img/featured/AssasinsCreed.png" alt="">
 					</div>
@@ -132,7 +146,7 @@
 
 				</div>
 			</div>
-			<div class="sprocess">
+			<div class="sprocess" id="development">
 				<div class="sprocess__container">
 					<div class="sprocess__topic topic">Strategic <span style="font-size:50px">P</span>rocess</div>
 					<div class="sprocess__intro info">

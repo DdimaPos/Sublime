@@ -95,7 +95,9 @@ body {
 }
 
 
-
+html{
+	scroll-behavior: smooth;
+}
 .content__background {}
 
 .content {
@@ -139,7 +141,7 @@ body {
 }
 
 .nav {
-
+	
 		color: white;
 		/*background-image: url('../img/navigation/far-cry-3-heroBanner.jpg');
 		background-size: cover;*/
