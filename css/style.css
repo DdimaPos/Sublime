@@ -137,9 +137,23 @@ body {
 
 .nav {
   color: white;
-  background-image: url("../img/navigation/far-cry-3-heroBanner.jpg");
-  background-size: cover;
+  /*background-image: url('../img/navigation/far-cry-3-heroBanner.jpg');
+		background-size: cover;*/
+}
+
+.nav .nav__text {
   padding: 58px 0 400px 40px;
+}
+
+.nav .nav__background {
+  padding: 0;
+  position: absolute;
+  z-index: -1;
+  max-width: 1200px;
+}
+
+.nav .nav__background img {
+  width: 100%;
 }
 
 .nav__choose {
@@ -457,6 +471,15 @@ body {
 
 @media (max-width: 1200px) {
   /*устрой нормальный адаптив к картинкам*/
+  .nav__background {
+    height: 100%;
+  }
+  .nav__background img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    overflow: hidden;
+  }
   .featured__images {
     -ms-flex-preferred-size: 33.33%;
         flex-basis: 33.33%;
@@ -538,7 +561,7 @@ body {
   .title__description {
     font-size: 12px;
   }
-  .nav {
+  .nav__text {
     padding: 10px 0 400px 40px;
     height: 550px;
   }
