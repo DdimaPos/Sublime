@@ -91,12 +91,21 @@ body {
 	font-family: "MyriadProR";
 	color: white;
 	font-weight: 700;
-	background-color: #161616;
+	background-color: rgb(19, 19, 19);
 }
 
 
 
-.content__background {}
+.content__background {
+	position: absolute;
+	width:  100%;
+	height: 100%;
+	z-index: -2;
+ }
+ .content__background img{
+	object-fit: cover;
+	width: 100%;
+ }
 
 .content {
 
@@ -634,7 +643,21 @@ body {
 	font-weight: normal;
 	font-style: normal;
 }
-@media (max-width: 1200px){/*устрой нормальный адаптив к картинкам*/
+@media (max-width: 1200px){
+	.content__background {
+		position: absolute;
+		width:  100%;
+		height: 100%;
+		z-index: -2;
+	 }
+	 .content__background img{
+		height: 100%;
+		  top: 0;
+		  max-height: 370px;
+		  -o-object-fit: cover;
+			  object-fit: cover;
+		  overflow: hidden;
+	 }
 	.nav__background{
 		height: 100%;
 		img{
