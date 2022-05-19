@@ -115,11 +115,16 @@ body {
 	
 }
 .title__name {
-			
+			transform:translate(0px, 90%);
+			opacity: 0;
+			transition: all 0.7s ease 0s;
 			font-size: 200px;
 			color: white;
 			font-weight: 700;
-
+			&._active{
+				transform:translate(0, 0);
+				opacity: 1;
+			}
 			&::first-letter {
 				color: #f2c244;
 			}
@@ -128,6 +133,17 @@ body {
 }
 
 .title__description {
+		transform:translate(0px, 90%);
+			opacity: 0;
+			transition: all 0.7s ease 0s;
+			font-size: 200px;
+			color: white;
+			font-weight: 700;
+			&._active{
+				transform:translate(0, 0);
+				opacity: 1;
+				transition: all 0.7s ease 0.5s;
+			}
 	color: white;
 	font-size: 18px;
 	width: fit-content;
@@ -399,9 +415,11 @@ body {
 }
 
 .contact {
+	
 	color: white;
 	background-color: blue;
 	.contact__body {
+		max-height: 600px;
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;

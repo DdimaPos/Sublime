@@ -113,9 +113,23 @@ body {
 }
 
 .title__name {
+  -webkit-transform: translate(0px, 90%);
+      -ms-transform: translate(0px, 90%);
+          transform: translate(0px, 90%);
+  opacity: 0;
+  -webkit-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
   font-size: 200px;
   color: white;
   font-weight: 700;
+}
+
+.title__name._active {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .title__name::first-letter {
@@ -123,11 +137,31 @@ body {
 }
 
 .title__description {
+  -webkit-transform: translate(0px, 90%);
+      -ms-transform: translate(0px, 90%);
+          transform: translate(0px, 90%);
+  opacity: 0;
+  -webkit-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
+  font-size: 200px;
+  color: white;
+  font-weight: 700;
   color: white;
   font-size: 18px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.title__description._active {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+  -webkit-transition: all 0.7s ease 0.5s;
+  -o-transition: all 0.7s ease 0.5s;
+  transition: all 0.7s ease 0.5s;
 }
 
 .title__description::first-letter {
@@ -437,6 +471,7 @@ body {
 }
 
 .contact .contact__body {
+  max-height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
